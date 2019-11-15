@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.notesadvisorset.NotesAdvisorSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.am_incident_srv_entities.NotesAdvisor" />
+        <variable name="notesAdvisor" type="NotesAdvisor"/>
+        <variable name="handler" type="com.sap.support.mdui.notesadvisorset.NotesAdvisorSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SessionKey"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.sessionKey).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Pointer"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.pointer).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SapnotesKey"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.sapnotesKey).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SapnotesNumber"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.sapnotesNumber).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Version"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.version).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Score"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.score).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="DocTypeKey"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.docTypeKey).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="DocTypeText"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.docTypeText).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Title"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.title).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Language"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.language).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Abstract_"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.abstract_).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Snippet"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.snippet).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ReleasedOn"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.releasedOn).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ChangedOn"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.changedOn).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CompName"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.compName).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CompDesc"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.compDesc).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="PriorityText"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.priorityText).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CategoryText"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.categoryText).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ReleaseStatusText"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.releaseStatusText).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CountryCode"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.countryCode).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CountryText"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.countryText).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="RatingAvg"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.ratingAvg).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="RatingVotes"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.ratingVotes).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Unread"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.unread).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SearchTerm"
+                        app:valueText="@{notesAdvisor.getOptionalValue(NotesAdvisor.searchTerm).toString()}" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

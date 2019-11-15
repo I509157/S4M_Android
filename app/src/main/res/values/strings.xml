@@ -1,0 +1,26 @@
+<resources  xmlns:tools="http://schemas.android.com/tools"
+             tools:ignore="MissingTranslation" >
+    <string name="application_name">sapforme</string>
+    <string name="eset_attachmentset">AttachmentSet</string>
+    <string name="eset_attachmentset_single">Attachment</string>
+    <string name="eset_configurationdataset">ConfigurationDataSet</string>
+    <string name="eset_configurationdataset_single">ConfigurationData</string>
+    <string name="eset_contactsset">ContactsSet</string>
+    <string name="eset_contactsset_single">Contacts</string>
+    <string name="eset_custprodinstset">CustProdInstSet</string>
+    <string name="eset_custprodinstset_single">CustProdInst</string>
+    <string name="eset_expertareaset">ExpertAreaSet</string>
+    <string name="eset_expertareaset_single">ExpertArea</string>
+    <string name="eset_incidentcreateset">IncidentCreateSet</string>
+    <string name="eset_incidentcreateset_single">IncidentCreate</string>
+    <string name="eset_incidentinfoset">IncidentInfoSet</string>
+    <string name="eset_incidentinfoset_single">IncidentInfo</string>
+    <string name="eset_loginuserdataset">LoginUserDataSet</string>
+    <string name="eset_loginuserdataset_single">LoginUserData</string>
+    <string name="eset_messagecoreset">MessageCoreSet</string>
+    <string name="eset_messagecoreset_single">MessageCore</string>
+    <string name="eset_notesadvisorset">NotesAdvisorSet</string>
+    <string name="eset_notesadvisorset_single">NotesAdvisor</string>
+    <string name="eset_systemsearchset">SystemSearchSet</string>
+    <string name="eset_systemsearchset_single">SystemSearch</string>
+</resources>

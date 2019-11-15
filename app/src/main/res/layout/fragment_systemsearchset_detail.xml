@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.systemsearchset.SystemSearchSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.am_incident_srv_entities.SystemSearch" />
+        <variable name="systemSearch" type="SystemSearch"/>
+        <variable name="handler" type="com.sap.support.mdui.systemsearchset.SystemSearchSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Uname"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.uname).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CustomerNbr"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.customerNbr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ProductNbr"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.productNbr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ProductTxt"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.productTxt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ProductVerNbr"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.productVerNbr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ProductVerTxt"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.productVerTxt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="InstallationNbr"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.installationNbr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SearchTxt"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.searchTxt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="MatchScore"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.matchScore).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SystemNbr"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.systemNbr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SystemID"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.systemID).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SystemName"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.systemName).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SystemType"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.systemType).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SupportPartnerNbr"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.supportPartnerNbr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SupportPartnerName"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.supportPartnerName).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SupportPartnerURL"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.supportPartnerURL).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="NotSelectable"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.notSelectable).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CustomerName"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.customerName).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="InstallationName"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.installationName).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SwClass"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.swClass).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SwType"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.swType).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="DpRest"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.dpRest).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SystemTypePrio"
+                        app:valueText="@{systemSearch.getOptionalValue(SystemSearch.systemTypePrio).toString()}" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

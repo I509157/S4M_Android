@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.loginuserdataset.LoginUserDataSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.am_incident_srv_entities.LoginUserData" />
+        <variable name="loginUserData" type="LoginUserData"/>
+        <variable name="handler" type="com.sap.support.mdui.loginuserdataset.LoginUserDataSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Susid"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.susid).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Adrnr"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.adrnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="UcFirst"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.ucFirst).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="UcLast"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.ucLast).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Title"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.title).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="FirstName"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.firstName).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="LastName"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.lastName).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="NameText"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.nameText).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Email"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.email).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="InternalUser"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.internalUser).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="PartnerUser"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.partnerUser).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CloudFlag"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.cloudFlag).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="OnpremFlag"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.onpremFlag).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Kunnr"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.kunnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CustName"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.custName).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="OnecustFlag"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.onecustFlag).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Phone"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.phone).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Handy"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.handy).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="OpenMsgFlag"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.openMsgFlag).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="WarrantyUser"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.warrantyUser).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="InstallationNbr"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.installationNbr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="InstallationTxt"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.installationTxt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Swtype"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.swtype).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SystemNbr"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.systemNbr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="SystemTxt"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.systemTxt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="TimeZone"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.timeZone).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="TimeZoneOffset"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.timeZoneOffset).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Land1UserProf"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.land1UserProf).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CountryUserProf"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.countryUserProf).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CicNoUserProf"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.cicNoUserProf).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Land1GPS"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.land1GPS).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CountryGPS"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.countryGPS).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CicNoGPS"
+                        app:valueText="@{loginUserData.getOptionalValue(LoginUserData.cicNoGPS).toString()}" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.attachmentset.AttachmentSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.am_incident_srv_entities.Attachment" />
+        <variable name="attachment" type="Attachment"/>
+        <variable name="handler" type="com.sap.support.mdui.attachmentset.AttachmentSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Hash"
+            app:valueText="@{attachment.getOptionalValue(Attachment.hash).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Pointer"
+            app:valueText="@{attachment.getOptionalValue(Attachment.pointer).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Service"
+            app:valueText="@{attachment.getOptionalValue(Attachment.service).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Servicetyp"
+            app:valueText="@{attachment.getOptionalValue(Attachment.servicetyp).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Filename"
+            app:valueText="@{attachment.getOptionalValue(Attachment.filename).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Text"
+            app:valueText="@{attachment.getOptionalValue(Attachment.text).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Type_"
+            app:valueText="@{attachment.getOptionalValue(Attachment.type_).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Merftstmp"
+            app:valueText="@{attachment.getOptionalValue(Attachment.merftstmp).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Merfnam"
+            app:valueText="@{attachment.getOptionalValue(Attachment.merfnam).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Maetstmp"
+            app:valueText="@{attachment.getOptionalValue(Attachment.maetstmp).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Maenam"
+            app:valueText="@{attachment.getOptionalValue(Attachment.maenam).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Viruschecked"
+            app:valueText="@{attachment.getOptionalValue(Attachment.viruschecked).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Internal"
+            app:valueText="@{attachment.getOptionalValue(Attachment.internal).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Flag01"
+            app:valueText="@{attachment.getOptionalValue(Attachment.flag01).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Flag02"
+            app:valueText="@{attachment.getOptionalValue(Attachment.flag02).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Flag03"
+            app:valueText="@{attachment.getOptionalValue(Attachment.flag03).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Flag04"
+            app:valueText="@{attachment.getOptionalValue(Attachment.flag04).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Isurl"
+            app:valueText="@{attachment.getOptionalValue(Attachment.isurl).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Url2"
+            app:valueText="@{attachment.getOptionalValue(Attachment.url2).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Cpocd"
+            app:valueText="@{attachment.getOptionalValue(Attachment.cpocd).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Dprest"
+            app:valueText="@{attachment.getOptionalValue(Attachment.dprest).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Uuid"
+            app:valueText="@{attachment.getOptionalValue(Attachment.uuid).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Filelength"
+            app:valueText="@{attachment.getOptionalValue(Attachment.filelength).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Data"
+            app:valueText="@{attachment.getOptionalValue(Attachment.data).toString()}" />
+
+    </LinearLayout>
+</layout>

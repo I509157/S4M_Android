@@ -1,0 +1,17 @@
+   ______________________________
+ / \                             \.
+|   | This log file was created  |.
+ \_ | by the Wizard, it contains |.
+    | the configuration data     |.
+    | used for the application   |.
+    | generation.                |.
+    |                            |.
+    | It shouldn't be edited     |.
+    | manually, changing it      |.
+    | won't affect the generated |.
+    | sample.                    |.
+    |   _________________________|___
+    |  /                            /.
+    \_/____________________________/.
+
+{"projectName":"sapforme","projectLocation":"C:\\Users\\I509157\\Project","projectNamespace":"com.sap.support","serviceURL":"https://mobile-dgq5qdz5dm.int.sap.eu2.hana.ondemand.com/","applicationID":"com.sap.support.msggo.release","applicationSecurityConfig":"OAUTH","jsonPath":null,"senderID":null,"serverKey":null,"isLogEnabled":true,"isLogUploadEnabled":true,"SAPSDKLocation":"ENV_VARIABLE","generateFileProviderDataFile":false,"defaultDiscoveryServiceEmailDomain":"int-dgq5qdz5dm.pilot.sapmobileplace.com","generateJavaCode":true,"generateOnlineApp":true,"isUsageIncluded":true}

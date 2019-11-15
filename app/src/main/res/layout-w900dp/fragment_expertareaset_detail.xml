@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.expertareaset.ExpertAreaSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.am_incident_srv_entities.ExpertArea" />
+        <variable name="expertArea" type="ExpertArea"/>
+        <variable name="handler" type="com.sap.support.mdui.expertareaset.ExpertAreaSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ExpertAreaKey"
+            app:valueText="@{expertArea.getOptionalValue(ExpertArea.expertAreaKey).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="AreaDescription"
+            app:valueText="@{expertArea.getOptionalValue(ExpertArea.areaDescription).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Component"
+            app:valueText="@{expertArea.getOptionalValue(ExpertArea.component).toString()}" />
+
+    </LinearLayout>
+</layout>

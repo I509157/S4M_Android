@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.messagecoreset.MessageCoreSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.am_incident_srv_entities.MessageCore" />
+        <variable name="messageCore" type="MessageCore"/>
+        <variable name="handler" type="com.sap.support.mdui.messagecoreset.MessageCoreSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Action"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.action).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Sysnr"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.sysnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Component"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.component).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ShortText"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.shortText).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="LongText"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.longText).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="BiText"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.biText).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ReproText"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.reproText).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Priority"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.priority).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Uname"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.uname).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Pointer"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.pointer).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="MnummNLZ"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.mnummNLZ).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="DraftFlag"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.draftFlag).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="DssClassified"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.dssClassified).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Language"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.language).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ContactStr"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.contactStr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="AttxStr"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.attxStr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ValueStr"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.valueStr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="RetCode"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.retCode).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ResultTxt"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.resultTxt).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="TextActive"
+            app:valueText="@{messageCore.getOptionalValue(MessageCore.textActive).toString()}" />
+
+    </LinearLayout>
+</layout>

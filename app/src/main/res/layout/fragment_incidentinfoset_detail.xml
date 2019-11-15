@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.incidentinfoset.IncidentInfoSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.am_incident_srv_entities.IncidentInfo" />
+        <variable name="incidentInfo" type="IncidentInfo"/>
+        <variable name="handler" type="com.sap.support.mdui.incidentinfoset.IncidentInfoSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Pointer"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.pointer).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="IncidentNumber"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.incidentNumber).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="IncidentYear"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.incidentYear).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Notetype"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.notetype).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Source"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.source).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Title"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.title).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Priority"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.priority).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Prioritytxt"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.prioritytxt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Status"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.status).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Statustxt"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.statustxt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Installation"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.installation).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="FirstS2sap"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.firstS2sap).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="LastS2sap"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.lastS2sap).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="TextBySAP"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.textBySAP).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="TextBy"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.textBy).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="TextTime"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.textTime).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="TextType"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.textType).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="TextTypetxt"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.textTypetxt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Text"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.text).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="DraftFlag"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.draftFlag).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="NewUpdateFlag"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.newUpdateFlag).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Auth"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.auth).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Url"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.url).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Uuid"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.uuid).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="AttachType"
+                        app:valueText="@{incidentInfo.getOptionalValue(IncidentInfo.attachType).toString()}" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

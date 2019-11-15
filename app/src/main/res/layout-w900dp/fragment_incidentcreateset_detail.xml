@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.incidentcreateset.IncidentCreateSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.am_incident_srv_entities.IncidentCreate" />
+        <variable name="incidentCreate" type="IncidentCreate"/>
+        <variable name="handler" type="com.sap.support.mdui.incidentcreateset.IncidentCreateSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="SessionKey"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.sessionKey).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Sysnr"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.sysnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Component"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.component).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Title"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.title).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="LongText"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.longText).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="StepToRepro"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.stepToRepro).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="BusImpact"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.busImpact).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Source"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.source).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Priority"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.priority).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Prioritytxt"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.prioritytxt).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Status"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.status).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Statustxt"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.statustxt).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Pointer"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.pointer).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="NotiFlag"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.notiFlag).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Language"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.language).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Notes"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.notes).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ContactStr"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.contactStr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="AttxStr"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.attxStr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ValueStr"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.valueStr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Action"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.action).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="RetCode"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.retCode).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ResultTxt"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.resultTxt).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="TextActive"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.textActive).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Url"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.url).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Uuid"
+            app:valueText="@{incidentCreate.getOptionalValue(IncidentCreate.uuid).toString()}" />
+
+    </LinearLayout>
+</layout>
